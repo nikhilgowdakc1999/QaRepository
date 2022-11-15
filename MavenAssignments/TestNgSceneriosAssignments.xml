@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Test cases">
+	<test name="Assignment 1">
+		<classes>
+			<class name="com.sgtesting.TestNgScenarioAssignments.Assignment1Actime"></class>
+		</classes>
+	</test>
+	<test name="Assignment 2">
+		<classes>
+			<class name="com.sgtesting.TestNgScenarioAssignments.Assignment2Actime"></class>
+		</classes>
+	</test>
+	<test name="Assignment 3">
+		<classes>
+			<class name="com.sgtesting.TestNgScenarioAssignments.Assignment3Actime"></class>
+		</classes>
+	</test>
+	<test name="Assignment 4">
+		<classes>
+			<class name="com.sgtesting.TestNgScenarioAssignments.Assignment4Actime"></class>
+		</classes>
+	</test>
+	<test name="Assignment 5">
+		<classes>
+			<class name="com.sgtesting.TestNgScenarioAssignments.Assignment5Actime"></class>
+		</classes>
+	</test>
+	<test name="Assignment 6">
+		<classes>
+			<class name="com.sgtesting.TestNgScenarioAssignments.Assignment6Actime"></class>
+		</classes>
+	</test>
+	<test name="Assignment 7">
+		<classes>
+			<class name="com.sgtesting.TestNgScenarioAssignments.Assignment7Actime"></class>
+		</classes>
+	</test>
+	<test name="Assignment 8">
+		<classes>
+			<class name="com.sgtesting.TestNgScenarioAssignments.Assignment8Actime"></class>
+		</classes>
+	</test>
+</suite>
