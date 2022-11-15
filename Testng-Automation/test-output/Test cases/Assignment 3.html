@@ -1,0 +1,289 @@
+<html>
+<head>
+<title>TestNG:  Assignment 3</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Assignment 3</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>42/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Fri Nov 11 07:11:11 IST 2022</td>
+</tr>
+<tr><td>Total time:</td><td>153 seconds (153352 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.sgtesting.TestNGScenarioAssignments.Assignment3Actime.Login()'><b>Login</b><br>Test class: com.sgtesting.TestNGScenarioAssignments.Assignment3Actime<br>Parameters: admin, manager</td>
+<td></td>
+<td>2</td>
+<td>com.sgtesting.TestNGScenarioAssignments.Assignment3Actime@5d534f5d</td></tr>
+<tr>
+<td title='com.sgtesting.TestNGScenarioAssignments.Assignment3Actime.SecondtimeLogoutuser3()'><b>SecondtimeLogoutuser3</b><br>Test class: com.sgtesting.TestNGScenarioAssignments.Assignment3Actime</td>
+<td></td>
+<td>2</td>
+<td>com.sgtesting.TestNGScenarioAssignments.Assignment3Actime@5d534f5d</td></tr>
+<tr>
+<td title='com.sgtesting.TestNGScenarioAssignments.Assignment3Actime.Modifyuser3()'><b>Modifyuser3</b><br>Test class: com.sgtesting.TestNGScenarioAssignments.Assignment3Actime<br>Parameters: niki, niki</td>
+<td></td>
+<td>7</td>
+<td>com.sgtesting.TestNGScenarioAssignments.Assignment3Actime@5d534f5d</td></tr>
+<tr>
+<td title='com.sgtesting.TestNGScenarioAssignments.Assignment3Actime.User2()'><b>User2</b><br>Test class: com.sgtesting.TestNGScenarioAssignments.Assignment3Actime<br>Parameters: demo, s, sam, sam@gmail.com, Demouser2, 123321, 123321</td>
+<td></td>
+<td>6</td>
+<td>com.sgtesting.TestNGScenarioAssignments.Assignment3Actime@5d534f5d</td></tr>
+<tr>
+<td title='com.sgtesting.TestNGScenarioAssignments.Assignment3Actime.AdminModifyuser1()'><b>AdminModifyuser1</b><br>Test class: com.sgtesting.TestNGScenarioAssignments.Assignment3Actime<br>Parameters: vinayak, sami, nikki</td>
+<td></td>
+<td>21</td>
+<td>com.sgtesting.TestNGScenarioAssignments.Assignment3Actime@5d534f5d</td></tr>
+<tr>
+<td title='com.sgtesting.TestNGScenarioAssignments.Assignment3Actime.Thirdtimeuser1logout()'><b>Thirdtimeuser1logout</b><br>Test class: com.sgtesting.TestNGScenarioAssignments.Assignment3Actime</td>
+<td></td>
+<td>2</td>
+<td>com.sgtesting.TestNGScenarioAssignments.Assignment3Actime@5d534f5d</td></tr>
+<tr>
+<td title='com.sgtesting.TestNGScenarioAssignments.Assignment3Actime.SecondtimeLoginUser2()'><b>SecondtimeLoginUser2</b><br>Test class: com.sgtesting.TestNGScenarioAssignments.Assignment3Actime<br>Parameters: Demouser2, 123321</td>
+<td></td>
+<td>1</td>
+<td>com.sgtesting.TestNGScenarioAssignments.Assignment3Actime@5d534f5d</td></tr>
+<tr>
+<td title='com.sgtesting.TestNGScenarioAssignments.Assignment3Actime.ThirdtimeLoginUser1()'><b>ThirdtimeLoginUser1</b><br>Test class: com.sgtesting.TestNGScenarioAssignments.Assignment3Actime<br>Parameters: Demouser1, vinayak</td>
+<td></td>
+<td>1</td>
+<td>com.sgtesting.TestNGScenarioAssignments.Assignment3Actime@5d534f5d</td></tr>
+<tr>
+<td title='com.sgtesting.TestNGScenarioAssignments.Assignment3Actime.SecondtimeLogoutuser2()'><b>SecondtimeLogoutuser2</b><br>Test class: com.sgtesting.TestNGScenarioAssignments.Assignment3Actime</td>
+<td></td>
+<td>2</td>
+<td>com.sgtesting.TestNGScenarioAssignments.Assignment3Actime@5d534f5d</td></tr>
+<tr>
+<td title='com.sgtesting.TestNGScenarioAssignments.Assignment3Actime.Logout()'><b>Logout</b><br>Test class: com.sgtesting.TestNGScenarioAssignments.Assignment3Actime</td>
+<td></td>
+<td>2</td>
+<td>com.sgtesting.TestNGScenarioAssignments.Assignment3Actime@5d534f5d</td></tr>
+<tr>
+<td title='com.sgtesting.TestNGScenarioAssignments.Assignment3Actime.LogoutModifieduser2()'><b>LogoutModifieduser2</b><br>Test class: com.sgtesting.TestNGScenarioAssignments.Assignment3Actime</td>
+<td></td>
+<td>1</td>
+<td>com.sgtesting.TestNGScenarioAssignments.Assignment3Actime@5d534f5d</td></tr>
+<tr>
+<td title='com.sgtesting.TestNGScenarioAssignments.Assignment3Actime.SecondtimeadminLogin()'><b>SecondtimeadminLogin</b><br>Test class: com.sgtesting.TestNGScenarioAssignments.Assignment3Actime<br>Parameters: admin, manager</td>
+<td></td>
+<td>1</td>
+<td>com.sgtesting.TestNGScenarioAssignments.Assignment3Actime@5d534f5d</td></tr>
+<tr>
+<td title='com.sgtesting.TestNGScenarioAssignments.Assignment3Actime.SecondtimeAdminlogout()'><b>SecondtimeAdminlogout</b><br>Test class: com.sgtesting.TestNGScenarioAssignments.Assignment3Actime</td>
+<td></td>
+<td>2</td>
+<td>com.sgtesting.TestNGScenarioAssignments.Assignment3Actime@5d534f5d</td></tr>
+<tr>
+<td title='com.sgtesting.TestNGScenarioAssignments.Assignment3Actime.minimizeFlyOutwindow()'><b>minimizeFlyOutwindow</b><br>Test class: com.sgtesting.TestNGScenarioAssignments.Assignment3Actime</td>
+<td></td>
+<td>2</td>
+<td>com.sgtesting.TestNGScenarioAssignments.Assignment3Actime@5d534f5d</td></tr>
+<tr>
+<td title='com.sgtesting.TestNGScenarioAssignments.Assignment3Actime.LoginUser1()'><b>LoginUser1</b><br>Test class: com.sgtesting.TestNGScenarioAssignments.Assignment3Actime<br>Parameters: Demouser1, 12345a</td>
+<td></td>
+<td>4</td>
+<td>com.sgtesting.TestNGScenarioAssignments.Assignment3Actime@5d534f5d</td></tr>
+<tr>
+<td title='com.sgtesting.TestNGScenarioAssignments.Assignment3Actime.LoginUser2()'><b>LoginUser2</b><br>Test class: com.sgtesting.TestNGScenarioAssignments.Assignment3Actime<br>Parameters: Demouser2, 123321</td>
+<td></td>
+<td>1</td>
+<td>com.sgtesting.TestNGScenarioAssignments.Assignment3Actime@5d534f5d</td></tr>
+<tr>
+<td title='com.sgtesting.TestNGScenarioAssignments.Assignment3Actime.DeleteUesers()'><b>DeleteUesers</b><br>Test class: com.sgtesting.TestNGScenarioAssignments.Assignment3Actime</td>
+<td></td>
+<td>12</td>
+<td>com.sgtesting.TestNGScenarioAssignments.Assignment3Actime@5d534f5d</td></tr>
+<tr>
+<td title='com.sgtesting.TestNGScenarioAssignments.Assignment3Actime.Logoutuser3()'><b>Logoutuser3</b><br>Test class: com.sgtesting.TestNGScenarioAssignments.Assignment3Actime</td>
+<td></td>
+<td>2</td>
+<td>com.sgtesting.TestNGScenarioAssignments.Assignment3Actime@5d534f5d</td></tr>
+<tr>
+<td title='com.sgtesting.TestNGScenarioAssignments.Assignment3Actime.ModifiedLoginUser2()'><b>ModifiedLoginUser2</b><br>Test class: com.sgtesting.TestNGScenarioAssignments.Assignment3Actime<br>Parameters: Demouser2, sam</td>
+<td></td>
+<td>1</td>
+<td>com.sgtesting.TestNGScenarioAssignments.Assignment3Actime@5d534f5d</td></tr>
+<tr>
+<td title='com.sgtesting.TestNGScenarioAssignments.Assignment3Actime.SecontimeLoginUser1()'><b>SecontimeLoginUser1</b><br>Test class: com.sgtesting.TestNGScenarioAssignments.Assignment3Actime<br>Parameters: Demouser1, 12345a</td>
+<td></td>
+<td>1</td>
+<td>com.sgtesting.TestNGScenarioAssignments.Assignment3Actime@5d534f5d</td></tr>
+<tr>
+<td title='com.sgtesting.TestNGScenarioAssignments.Assignment3Actime.Logoutuser1()'><b>Logoutuser1</b><br>Test class: com.sgtesting.TestNGScenarioAssignments.Assignment3Actime</td>
+<td></td>
+<td>2</td>
+<td>com.sgtesting.TestNGScenarioAssignments.Assignment3Actime@5d534f5d</td></tr>
+<tr>
+<td title='com.sgtesting.TestNGScenarioAssignments.Assignment3Actime.ThirdtimeLoginUser2()'><b>ThirdtimeLoginUser2</b><br>Test class: com.sgtesting.TestNGScenarioAssignments.Assignment3Actime<br>Parameters: Demouser2, sami</td>
+<td></td>
+<td>1</td>
+<td>com.sgtesting.TestNGScenarioAssignments.Assignment3Actime@5d534f5d</td></tr>
+<tr>
+<td title='com.sgtesting.TestNGScenarioAssignments.Assignment3Actime.Modifyuser1()'><b>Modifyuser1</b><br>Test class: com.sgtesting.TestNGScenarioAssignments.Assignment3Actime<br>Parameters: vini, vini</td>
+<td></td>
+<td>7</td>
+<td>com.sgtesting.TestNGScenarioAssignments.Assignment3Actime@5d534f5d</td></tr>
+<tr>
+<td title='com.sgtesting.TestNGScenarioAssignments.Assignment3Actime.launchBrowser()'><b>launchBrowser</b><br>Test class: com.sgtesting.TestNGScenarioAssignments.Assignment3Actime</td>
+<td></td>
+<td>1</td>
+<td>com.sgtesting.TestNGScenarioAssignments.Assignment3Actime@5d534f5d</td></tr>
+<tr>
+<td title='com.sgtesting.TestNGScenarioAssignments.Assignment3Actime.SecondtimeLogoutuser1()'><b>SecondtimeLogoutuser1</b><br>Test class: com.sgtesting.TestNGScenarioAssignments.Assignment3Actime</td>
+<td></td>
+<td>1</td>
+<td>com.sgtesting.TestNGScenarioAssignments.Assignment3Actime@5d534f5d</td></tr>
+<tr>
+<td title='com.sgtesting.TestNGScenarioAssignments.Assignment3Actime.Thirdtimeuser2logout()'><b>Thirdtimeuser2logout</b><br>Test class: com.sgtesting.TestNGScenarioAssignments.Assignment3Actime</td>
+<td></td>
+<td>2</td>
+<td>com.sgtesting.TestNGScenarioAssignments.Assignment3Actime@5d534f5d</td></tr>
+<tr>
+<td title='com.sgtesting.TestNGScenarioAssignments.Assignment3Actime.ThirdtimeLoginUser3()'><b>ThirdtimeLoginUser3</b><br>Test class: com.sgtesting.TestNGScenarioAssignments.Assignment3Actime<br>Parameters: Demouser3, nikki</td>
+<td></td>
+<td>1</td>
+<td>com.sgtesting.TestNGScenarioAssignments.Assignment3Actime@5d534f5d</td></tr>
+<tr>
+<td title='com.sgtesting.TestNGScenarioAssignments.Assignment3Actime.Navigate()'><b>Navigate</b><br>Test class: com.sgtesting.TestNGScenarioAssignments.Assignment3Actime</td>
+<td></td>
+<td>5</td>
+<td>com.sgtesting.TestNGScenarioAssignments.Assignment3Actime@5d534f5d</td></tr>
+<tr>
+<td title='com.sgtesting.TestNGScenarioAssignments.Assignment3Actime.LogoutModifieduser1()'><b>LogoutModifieduser1</b><br>Test class: com.sgtesting.TestNGScenarioAssignments.Assignment3Actime</td>
+<td></td>
+<td>1</td>
+<td>com.sgtesting.TestNGScenarioAssignments.Assignment3Actime@5d534f5d</td></tr>
+<tr>
+<td title='com.sgtesting.TestNGScenarioAssignments.Assignment3Actime.thirdtimeadminLogin()'><b>thirdtimeadminLogin</b><br>Test class: com.sgtesting.TestNGScenarioAssignments.Assignment3Actime<br>Parameters: admin, manager</td>
+<td></td>
+<td>1</td>
+<td>com.sgtesting.TestNGScenarioAssignments.Assignment3Actime@5d534f5d</td></tr>
+<tr>
+<td title='com.sgtesting.TestNGScenarioAssignments.Assignment3Actime.ThirdtimeAdminlogout()'><b>ThirdtimeAdminlogout</b><br>Test class: com.sgtesting.TestNGScenarioAssignments.Assignment3Actime</td>
+<td></td>
+<td>2</td>
+<td>com.sgtesting.TestNGScenarioAssignments.Assignment3Actime@5d534f5d</td></tr>
+<tr>
+<td title='com.sgtesting.TestNGScenarioAssignments.Assignment3Actime.SecondtimeLoginUser3()'><b>SecondtimeLoginUser3</b><br>Test class: com.sgtesting.TestNGScenarioAssignments.Assignment3Actime<br>Parameters: Demouser3, 121212</td>
+<td></td>
+<td>3</td>
+<td>com.sgtesting.TestNGScenarioAssignments.Assignment3Actime@5d534f5d</td></tr>
+<tr>
+<td title='com.sgtesting.TestNGScenarioAssignments.Assignment3Actime.LogoutModifieduser3()'><b>LogoutModifieduser3</b><br>Test class: com.sgtesting.TestNGScenarioAssignments.Assignment3Actime</td>
+<td></td>
+<td>1</td>
+<td>com.sgtesting.TestNGScenarioAssignments.Assignment3Actime@5d534f5d</td></tr>
+<tr>
+<td title='com.sgtesting.TestNGScenarioAssignments.Assignment3Actime.ModifiedLoginUser1()'><b>ModifiedLoginUser1</b><br>Test class: com.sgtesting.TestNGScenarioAssignments.Assignment3Actime<br>Parameters: Demouser1, vini</td>
+<td></td>
+<td>1</td>
+<td>com.sgtesting.TestNGScenarioAssignments.Assignment3Actime@5d534f5d</td></tr>
+<tr>
+<td title='com.sgtesting.TestNGScenarioAssignments.Assignment3Actime.Modifyuser2()'><b>Modifyuser2</b><br>Test class: com.sgtesting.TestNGScenarioAssignments.Assignment3Actime<br>Parameters: sam, sam</td>
+<td></td>
+<td>7</td>
+<td>com.sgtesting.TestNGScenarioAssignments.Assignment3Actime@5d534f5d</td></tr>
+<tr>
+<td title='com.sgtesting.TestNGScenarioAssignments.Assignment3Actime.Thirdtimeuser3logout()'><b>Thirdtimeuser3logout</b><br>Test class: com.sgtesting.TestNGScenarioAssignments.Assignment3Actime</td>
+<td></td>
+<td>2</td>
+<td>com.sgtesting.TestNGScenarioAssignments.Assignment3Actime@5d534f5d</td></tr>
+<tr>
+<td title='com.sgtesting.TestNGScenarioAssignments.Assignment3Actime.CloseBrowser()'><b>CloseBrowser</b><br>Test class: com.sgtesting.TestNGScenarioAssignments.Assignment3Actime</td>
+<td></td>
+<td>3</td>
+<td>com.sgtesting.TestNGScenarioAssignments.Assignment3Actime@5d534f5d</td></tr>
+<tr>
+<td title='com.sgtesting.TestNGScenarioAssignments.Assignment3Actime.LoginUser3()'><b>LoginUser3</b><br>Test class: com.sgtesting.TestNGScenarioAssignments.Assignment3Actime<br>Parameters: Demouser3, 121212</td>
+<td></td>
+<td>1</td>
+<td>com.sgtesting.TestNGScenarioAssignments.Assignment3Actime@5d534f5d</td></tr>
+<tr>
+<td title='com.sgtesting.TestNGScenarioAssignments.Assignment3Actime.User1()'><b>User1</b><br>Test class: com.sgtesting.TestNGScenarioAssignments.Assignment3Actime<br>Parameters: demo, v, vin, demo@gmail.com, Demouser1, 12345a, 12345a</td>
+<td></td>
+<td>10</td>
+<td>com.sgtesting.TestNGScenarioAssignments.Assignment3Actime@5d534f5d</td></tr>
+<tr>
+<td title='com.sgtesting.TestNGScenarioAssignments.Assignment3Actime.User3()'><b>User3</b><br>Test class: com.sgtesting.TestNGScenarioAssignments.Assignment3Actime<br>Parameters: demo, s, niki, niki@gmail.com, Demouser3, 121212, 121212</td>
+<td></td>
+<td>6</td>
+<td>com.sgtesting.TestNGScenarioAssignments.Assignment3Actime@5d534f5d</td></tr>
+<tr>
+<td title='com.sgtesting.TestNGScenarioAssignments.Assignment3Actime.Logoutuser2()'><b>Logoutuser2</b><br>Test class: com.sgtesting.TestNGScenarioAssignments.Assignment3Actime</td>
+<td></td>
+<td>2</td>
+<td>com.sgtesting.TestNGScenarioAssignments.Assignment3Actime@5d534f5d</td></tr>
+<tr>
+<td title='com.sgtesting.TestNGScenarioAssignments.Assignment3Actime.ModifiedLoginUser3()'><b>ModifiedLoginUser3</b><br>Test class: com.sgtesting.TestNGScenarioAssignments.Assignment3Actime<br>Parameters: Demouser3, niki</td>
+<td></td>
+<td>1</td>
+<td>com.sgtesting.TestNGScenarioAssignments.Assignment3Actime@5d534f5d</td></tr>
+</table><p>
+</body>
+</html>
