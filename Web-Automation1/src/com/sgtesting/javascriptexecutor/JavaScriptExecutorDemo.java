@@ -7,6 +7,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class JavaScriptExecutorDemo {
 
@@ -14,18 +15,21 @@ public class JavaScriptExecutorDemo {
 	public static void main(String[] args) {
 		launchBrowser();
 		navigate();
-    	displayURL();
-	//	displayTitle();
+	//	displayURL();
+//		displayTitle();
 	//	displayLinksCount();
 	//	enterTextContent1();
 	//	enterTextContent2();
 	//	clickOnButtonField1();
 	//	clickOnButtonField2();
 	//	clickOnCheckBoxField1();
-		clickOnCheckBoxField2();
+	//	clickOnCheckBoxField2();
 	//	clickOnRadioButtonField1();
 	//	clickOnRadioButtonField2();
 	//	clikOnLink();
+		selectItemFromDropDown();
+	//	scrollintoview();
+	//	drawborder();
 	}
 	
 	private static void launchBrowser()
@@ -34,7 +38,9 @@ public class JavaScriptExecutorDemo {
 		{
 			String path=System.getProperty("user.dir");
 			System.setProperty("webdriver.chrome.driver", path+"\\Library\\drivers\\chromedriver.exe");
-			oBrowser=new ChromeDriver();
+			ChromeOptions options=new ChromeOptions();
+			options.addArguments("--remote-allow-origins=*");
+			oBrowser=new ChromeDriver(options);
 		}catch(Exception e)
 		{
 			e.printStackTrace();
@@ -45,13 +51,17 @@ public class JavaScriptExecutorDemo {
 	{
 		try
 		{
-			oBrowser.get("E:\\Niki\\Sg notes\\xpath_xpathaxes_samplehtmlfiles\\SampleXPath.html");
-			Thread.sleep(5000);
+			oBrowser.get("D:\\New folder\\niki\\xpath_xpathaxes_samplehtmlfiles\\SampleXPath.html");
+			Thread.sleep(2000);
+			JavascriptExecutor js=(JavascriptExecutor) oBrowser;
+		  //  js.executeScript("alert('welcome to webpage')");
+			Thread.sleep(2000);
 		}catch(Exception e)
 		{
 			e.printStackTrace();
 		}
 	}
+	
 	/**
 	 * Get the URL of the Web Page
 	 */
@@ -137,8 +147,8 @@ public class JavaScriptExecutorDemo {
 		WebElement oEle=oBrowser.findElement(By.id("chk1windows"));
 		WebElement oEle1=oBrowser.findElement(By.id("chk2linux"));
 		JavascriptExecutor js=(JavascriptExecutor) oBrowser;
-		js.executeScript("arguments[0].click();arguments[1].click();",oEle,oEle1);
-		//js.executeScript();
+		js.executeScript("arguments[0].click();",oEle);
+		js.executeScript("arguments[0].click();",oEle1);
 	}
 	
 	/**
@@ -168,6 +178,37 @@ public class JavaScriptExecutorDemo {
 		List<WebElement> olinks=oBrowser.findElements(By.tagName("a"));
 		System.out.println(olinks.size());
 		JavascriptExecutor js=(JavascriptExecutor) oBrowser;
-		js.executeScript("arguments[0].click();",olinks.get(0));
+		js.executeScript("arguments[0].click();",olinks.get(1));
+	}
+	/**
+	 * Select Item from Drop Down
+	 */
+	private static void selectItemFromDropDown()
+	{
+		JavascriptExecutor js=(JavascriptExecutor) oBrowser;
+		String str="var list=document.getElementById('tools');";
+		str+="for(var i=0;i<list.length;i++)";
+		str+="{";
+		str+="if(list[i].text='Selenium IDE')";
+		str+="{";
+		str+="list[i].selected='1'";
+		str+="}";
+		str+="}";
+		
+		js.executeScript(str);
+	}
+	private static void scrollintoview()
+	{
+		WebElement scroll=oBrowser.findElement(By.xpath("//form[@id='frm3']/input[11]"));
+		JavascriptExecutor js=(JavascriptExecutor) oBrowser;
+		js.executeScript("arguments[0].scrollIntoView(true)",scroll);
+		scroll.sendKeys("Nikhil");
+	}
+	private static void drawborder()
+	{
+		WebElement border=oBrowser.findElement(By.xpath("//form[@id='frm3']/input[11]"));
+		JavascriptExecutor js=(JavascriptExecutor) oBrowser;
+		js.executeScript("arguments[0].style.border='solid red'",border);
+		
 	}
 }

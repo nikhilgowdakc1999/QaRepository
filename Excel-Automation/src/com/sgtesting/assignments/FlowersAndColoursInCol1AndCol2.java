@@ -32,7 +32,7 @@ public class FlowersAndColoursInCol1AndCol2 {
 				cell=row.createCell(1);
 				cell.setCellValue("Colour"+(i+1));
 			}	
-			fout=new FileOutputStream("E:\\Niki\\Sg notes\\20-Flowers&Colours.xlsx");
+			fout=new FileOutputStream("D:\\New folder\\niki\\20-Flowers&Colours1.xlsx");
 			wb.write(fout);
 
 		}catch(Exception e)

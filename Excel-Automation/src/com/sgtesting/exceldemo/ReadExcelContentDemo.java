@@ -23,7 +23,7 @@ public class ReadExcelContentDemo {
 		Cell cell=null;
 		try
 		{
-			fin=new FileInputStream("E:\\EXCEL\\Test.xlsx");
+			fin=new FileInputStream("D:\\New folder\\niki\\Test.xlsx");
 			wb=new XSSFWorkbook(fin);
 			sh=wb.getSheet("Sheet1");
 			int rc=sh.getPhysicalNumberOfRows();

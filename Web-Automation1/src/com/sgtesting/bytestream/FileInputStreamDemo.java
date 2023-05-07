@@ -14,7 +14,7 @@ public class FileInputStreamDemo {
 		int n=0;
 		try
 		{
-			fin=new FileInputStream("E:\\EXAMPLE\\Welcome\\Sample.txt");
+			fin=new FileInputStream("D:\\New folder\\EXAMPLE\\WELCOME\\Sample.txt");
 			while(true)
 			{
 				n=fin.read();

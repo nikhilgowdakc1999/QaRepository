@@ -3,6 +3,7 @@ package com.sgtesting.popupbrowser;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class PopupBrowsersDemo {
 	public static WebDriver oBrowser=null;
@@ -18,7 +19,9 @@ public class PopupBrowsersDemo {
 		{
 			String path=System.getProperty("user.dir");
 			System.setProperty("webdriver.chrome.driver", path+"\\Library\\drivers\\chromedriver.exe");
-			oBrowser=new ChromeDriver();
+			ChromeOptions options=new ChromeOptions();
+			options.addArguments("--remote-allow-origins=*");
+			oBrowser=new ChromeDriver(options);
 		}catch(Exception e)
 		{
 			e.printStackTrace();
@@ -36,7 +39,7 @@ public class PopupBrowsersDemo {
 			e.printStackTrace();
 		}
 	}
-	
+	//3rd Step:-
 	private static void handlePopUps()
 	{
 		try
@@ -55,7 +58,7 @@ public class PopupBrowsersDemo {
 			e.printStackTrace();
 		}
 	}
-	
+	//1st sep:- 
 	private static int getPopupCount()
 	{
 		int count=0;
@@ -68,7 +71,7 @@ public class PopupBrowsersDemo {
 		}
 		return count;
 	}
-	
+	//2nd Step:-
 	private static void popupBrowsers()
 	{
 		try

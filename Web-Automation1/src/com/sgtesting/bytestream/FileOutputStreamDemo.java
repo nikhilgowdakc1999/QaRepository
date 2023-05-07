@@ -12,12 +12,12 @@ public class FileOutputStreamDemo {
 		FileOutputStream fout=null;
 		try
 		{
-			fout=new FileOutputStream("E:\\EXAMPLE\\Welcome\\Sample.txt");
+			fout=new FileOutputStream("D:\\New folder\\EXAMPLE\\WELCOME\\Sample.txt",true);
 			String str="Java is a Programming Language,";
 			str+="Java used for developing the Applications";
 			
 			byte b[]=str.getBytes();
-		fout.write(b);
+		    fout.write(b);
 		}catch(Exception e)
 		{
 			e.printStackTrace();

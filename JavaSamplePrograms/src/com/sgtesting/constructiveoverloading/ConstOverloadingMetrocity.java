@@ -20,7 +20,5 @@ public class ConstOverloadingMetrocity {
 		Metrocity a1=new Metrocity("namma metro");
 		Metrocity a2=new Metrocity(05,"electrified");
 		Metrocity a3=new Metrocity("bangalore",3000);
-
 	}
-
 }

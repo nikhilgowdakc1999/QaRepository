@@ -39,7 +39,7 @@ public class Trail7MultiInheritanceSameMethod2 {
 
 	public static void main(String[] args) {
 		CC15 a1=new CC15("vini");
-		a1.AA13("benzi");
+		a1.AA13("benzeee");
 	}
 
 }

@@ -12,9 +12,9 @@ public class VectorListDemo {
 		//	removeElements();
 		//	readElements1();
 		//	readElements2();
-		//	readElementsIterator();
+			readElementsIterator();
 		//	readElementsEnumeration();
-			withoutGenerics();
+		//	withoutGenerics();
 	}
 	private static void addElements()
 	{

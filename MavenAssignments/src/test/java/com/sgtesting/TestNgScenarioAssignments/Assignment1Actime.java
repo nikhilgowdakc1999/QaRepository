@@ -17,7 +17,8 @@ public class Assignment1Actime {
 	{
 		try
 		{
-			System.setProperty("webdriver.chrome.driver","E:\\GitRepository\\CurrentWorkSpace\\ExampleAugust26th2022Repository\\Testng-Automation\\Library\\drivers\\chromedriver.exe");
+			String path=System.getProperty("user.dir");
+			System.setProperty("webdriver.chrome.driver", path+"\\Library\\Driver\\chromedriver.exe");
 			oBrowser=new ChromeDriver();
 		}catch(Exception e)
 		{

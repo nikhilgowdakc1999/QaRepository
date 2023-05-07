@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class FramesDemo {
 
@@ -20,7 +21,9 @@ public class FramesDemo {
 		{
 			String path=System.getProperty("user.dir");
 			System.setProperty("webdriver.chrome.driver", path+"\\Library\\drivers\\chromedriver.exe");
-			oBrowser=new ChromeDriver();
+			ChromeOptions options=new ChromeOptions();
+			options.addArguments("--remote-allow-origins=*");
+			oBrowser=new ChromeDriver(options);
 		}catch(Exception e)
 		{
 			e.printStackTrace();

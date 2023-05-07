@@ -29,6 +29,7 @@ public class RunnerScript {
 			wb=new XSSFWorkbook(fin);
 			sh=wb.getSheet("Sheet1");
 			int rc=sh.getPhysicalNumberOfRows();
+			// starts from 1 as 0 will be header
 			for(int r=1;r<rc;r++)
 			{
 				row=sh.getRow(r);

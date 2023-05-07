@@ -17,7 +17,7 @@ public class BufferedReader1 {
 		BufferedReader br=null;
 		try
 		{
-			fr=new FileReader("E:\\EXAMPLE\\Welcome\\Sample.txt");
+			fr=new FileReader("D:\\New folder\\EXAMPLE\\WELCOME\\Sample.txt");
 			br=new BufferedReader(fr);
 			
 			String strLine=null;

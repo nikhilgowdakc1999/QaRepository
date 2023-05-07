@@ -1,4 +1,5 @@
 package com.sgtesting.exceptionhandling;
+
 class Stringvalidation2
 {
 	static void getcharactercount(String s)

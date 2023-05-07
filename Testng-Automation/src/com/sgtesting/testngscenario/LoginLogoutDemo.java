@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -16,8 +17,11 @@ public class LoginLogoutDemo {
 	{
 		try
 		{
-			System.setProperty("webdriver.chrome.driver", "E:\\GitRepository\\CurrentWorkSpace\\ExampleAugust26th2022Repository\\Testng-Automation\\Library\\drivers\\chromedriver.exe");
-			oBrowser=new ChromeDriver();
+			String path=System.getProperty("user.dir");
+			System.setProperty("webdriver.chrome.driver", path+"\\Library\\drivers\\chromedriver.exe");
+			ChromeOptions options=new ChromeOptions();
+			options.addArguments("--remote-allow-origins=*");
+			oBrowser=new ChromeDriver(options);
 		}catch(Exception e)
 		{
 			e.printStackTrace();
@@ -60,10 +64,10 @@ public class LoginLogoutDemo {
 	@Test(priority = 4)
 	private static void minimizeFlyOutwindow()
 	{
-		String expected;
+		
 		try
 		{
-			expected="Getting Started Shortcuts";
+			String expected="Getting Started Shortcuts";
 			WebElement oEle=oBrowser.findElement(By.xpath("//div[text()='Getting Started Shortcuts']"));
 			oBrowser.findElement(By.id("gettingStartedShortcutsPanelId")).click();
 			Thread.sleep(2000);

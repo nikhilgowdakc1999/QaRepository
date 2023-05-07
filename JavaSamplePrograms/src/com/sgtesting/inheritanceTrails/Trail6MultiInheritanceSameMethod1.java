@@ -15,7 +15,7 @@ class BB14 extends AA14
 	}
 	void AA13(String name)
 	{
-		//to differentiate class AA13 and class BB15 print(method 2) if (name) is given it iterates 
+		//to differentiate class AA14 and class BB14 print(method 2) if (name) is given it iterates 
 		//	i.e niki comes twice
 
 		System.out.println(name);

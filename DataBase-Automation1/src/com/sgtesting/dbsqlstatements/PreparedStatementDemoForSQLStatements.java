@@ -1,17 +1,13 @@
 package com.sgtesting.dbsqlstatements;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
+import java.sql.*;
 
 public class PreparedStatementDemoForSQLStatements {
 
 	public static void main(String[] args) {
-	//	getRecordsFromDatabase();
+		getRecordsFromDatabase();
 	//	insertRecords();
-		deleteRecords();
+	//	deleteRecords();
 	}
 	
 	private static void getRecordsFromDatabase()
@@ -74,8 +70,8 @@ public class PreparedStatementDemoForSQLStatements {
 			conn=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "System", "tiger");
 			
 			String strQuery="insert into Employee values(04,'Benzee','MD',90000)";
-			PreparedStatement stmt=conn.prepareStatement(strQuery);
-			stmt.executeUpdate();
+			PreparedStatement pstmt=conn.prepareStatement(strQuery);
+			pstmt.executeUpdate();
 			System.out.println("Inserted the records successfully!!!");
 		}catch (Exception e) 
 		{
@@ -101,8 +97,8 @@ public class PreparedStatementDemoForSQLStatements {
 			conn=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "System", "tiger");
 			
 			String strQuery="delete from Employee where EMPID=04";
-			PreparedStatement stmt=conn.prepareStatement(strQuery);
-			stmt.executeUpdate();
+			PreparedStatement pstmt=conn.prepareStatement(strQuery);
+			pstmt.executeUpdate();
 			System.out.println("deleted the records successfully!!!");
 		}catch (Exception e) 
 		{

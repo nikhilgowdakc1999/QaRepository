@@ -12,7 +12,7 @@ public class FileWriteDemo {
 		FileWriter fw=null;
 		try
 		{
-			fw=new FileWriter("E:\\EXAMPLE\\Welcome\\Sample2.txt",true);
+			fw=new FileWriter("D:\\New folder\\EXAMPLE\\WELCOME\\Sample2.txt",true);
 			String str="Java is a Programming Language,";
 			str+="Java used for developing the Applications";
 			

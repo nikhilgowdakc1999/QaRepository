@@ -1,5 +1,6 @@
 package com.sgtesting.inheritance;
 //Multilevel Inheritance same Method
+//method overriding
 class Intl
 {
 	void AA10(String name)

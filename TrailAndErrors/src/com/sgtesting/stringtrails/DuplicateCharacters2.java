@@ -1,31 +1,64 @@
 package com.sgtesting.stringtrails;
 
-import java.util.HashMap;
-
+//Java program for finding duplicates using HashMap
+import java.util.*;
 public class DuplicateCharacters2 {
 
-	public static void main(String[] args) {
+	// Function to print all duplicate
+	// characters in string using HashMap
+	public static void
+	countDuplicateCharacters(String str)
+	{
 
-		String str=" Programming ";
-		HashMap <Character,Integer> oMap=new HashMap<>();
-		for(int i=str.length()-1;i>=0;i--)
+		// Creating a HashMap containing char
+		// as a key and occurrences as a value
+		Map<Character, Integer> map
+		= new HashMap<Character, Integer>();
+
+		// Converting given string into
+		// a char array
+		char charArray[] = str.toCharArray();
+
+		// Checking each character
+		// of charArray
+		for (char c : charArray)
 		{
-			if(oMap.containsKey(str.charAt(i)))
+			if (map.containsKey(c))
 			{
-				System.out.println(str.charAt(i));
-				System.out.println("1 "+oMap);
-				int count=oMap.get(str.charAt(i));
-				System.out.println("2 "+count);
-				oMap.put(str.charAt(i),++count);
-				System.out.println("3 "+oMap);
-				System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+				// If character is present
+				// in map incrementing it's
+				// count by 1
+				map.put(c, map.get(c) + 1);
 			}
-			else
+			else 
 			{
-				oMap.put(str.charAt(i),1);
+				// If character is not present
+				// in map putting this
+				// character into map with
+				// 1 as it's value.
+				map.put(c, 1);
 			}
 		}
-		System.out.println(oMap);
+
+		// Traverse the HashMap, check
+		// if the count of the character
+		// is greater than 1 then print
+		// the character and its frequency
+		Set<Character> keys=map.keySet(); 
+		for (char ch:keys)
+		{
+			System.out.println(ch+"-->"+map.get(ch));
+		}
+
 	}
 
+	// Driver Code
+	public static void main(String args[])
+	{
+		// Given String str
+		String str = "geeks for geeks";
+
+		// Function Call
+		countDuplicateCharacters(str);
+	}
 }

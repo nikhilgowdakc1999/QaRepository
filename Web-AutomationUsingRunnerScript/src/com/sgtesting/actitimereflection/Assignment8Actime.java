@@ -4,6 +4,7 @@ package com.sgtesting.actitimereflection;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class Assignment8Actime {
 	public static WebDriver oBrowser=null;
@@ -26,8 +27,11 @@ public class Assignment8Actime {
 	{
 		try 
 		{
-			System.setProperty("webdriver.chrome.driver","E:\\ExampleAutomation\\Automation\\Web-Automation1\\Library\\drivers\\chromedriver.exe");
-			oBrowser=new ChromeDriver();
+			String path=System.getProperty("user.dir");
+			System.setProperty("webdriver.chrome.driver", path+"\\Library\\Driver\\chromedriver.exe");
+			ChromeOptions options=new ChromeOptions();
+			options.addArguments("--remote-allow-origins=*");
+			oBrowser=new ChromeDriver(options);
 			oBrowser.manage().window().maximize();
 			Thread.sleep(3000);
 		}catch(Exception e)

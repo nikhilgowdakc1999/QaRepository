@@ -4,7 +4,7 @@ public class PatternTrail7For {
 
 	public static void main(String[] args) {
 		int n=5;
-		//i<n to reduce 1 column
+		//i<n to reduce 1 row
 		for(int i=1;i<n;i++)
 		{	
 	   //increasing Triangle of "  "

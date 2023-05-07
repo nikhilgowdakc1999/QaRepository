@@ -3,7 +3,7 @@ package com.sgtesting.abstractclass;
 abstract class AA9
 {
 	static String name;
-	void display1()
+     void display1()
 	{
 		System.out.println(name);
 	}
@@ -16,7 +16,7 @@ abstract class BB9 extends AA9
 	 AA9.name="niki";
 	}
 	static String name;
-	void display2()
+	 void display2()
 	{
 		System.out.println(name);
 	}
@@ -39,7 +39,7 @@ class DD9 extends CC9
 	{
 		CC9.name="vini";
 	}
-}
+} 
 
 public class AbsAllMultiSameStaticVariable {
 
@@ -48,7 +48,7 @@ public class AbsAllMultiSameStaticVariable {
 		DD9 a1=new DD9();
 		a1.display1();
 		a1.display2();
-		a1.display3();
+		a1.display3(); 
 	}
 
 }

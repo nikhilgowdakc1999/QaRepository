@@ -30,7 +30,7 @@ public class StateNames20Diagonally {
 				cell=row.createCell(i);
 				cell.setCellValue("State"+(i+1));
 			}
-			fout=new FileOutputStream("E:\\Niki\\Sg notes\\20-StateNames.xlsx");
+			fout=new FileOutputStream("D:\\New folder\\niki\\20-StateNames1.xlsx");
 			wb.write(fout);
 
 		}catch(Exception e)

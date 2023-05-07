@@ -33,7 +33,7 @@ public class SelectItemFromDropDown {
 	{
 		try
 		{
-			oBrowser.get("E:\\Niki\\Sg notes\\xpath_xpathaxes_samplehtmlfiles\\SampleXPath.html");
+			oBrowser.get("D:\\New folder\\niki\\xpath_xpathaxes_samplehtmlfiles\\SampleXPath.html");
 			Thread.sleep(5000);
 		}catch(Exception e)
 		{

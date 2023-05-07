@@ -14,7 +14,7 @@ public class FileClassDemo2 {
 	{
 		try
 		{
-			File f1=new File("E:\\EXAMPLE\\Welcome\\TestingDemo.txt");
+			File f1=new File("D:\\New folder\\EXAMPLE\\WELCOME\\TestingDemo.txt");
 			f1.createNewFile();
 		}catch(Exception e)
 		{

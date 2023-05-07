@@ -29,7 +29,7 @@ public class Flowers20In1sheet1col {
 				cell=row.createCell(0);
 				cell.setCellValue("Flower"+(i+1));
 			}
-			fout=new FileOutputStream("E:\\Niki\\Sg notes\\20-Flowers.xlsx");
+			fout=new FileOutputStream("D:\\New folder\\niki\\20-Flowers1.xlsx");
 			wb.write(fout);
 
 		}catch(Exception e)

@@ -10,18 +10,17 @@ class MatrixADD2
 		int b[][]= {{1,1,1},{2,2,2}};
 		return b;
 	}
-	void Madd(int a[][],int b[][])
+	int[][] Madd(int a[][],int b[][])
 	{		
 		int c[][]=new int[a.length][a[0].length];
 		for(int i=0;i<a.length;i++)
 		{
 			for(int k=0;k<a[0].length;k++)
 			{
-				c[i][k]=a[i][k]+b[i][k];
-				System.out.print(c[i][k]+" ");
-			}
-			System.out.println();
+				c[i][k]=a[i][k]+b[i][k];	
+			}	
 		}
+		return c;
 	}
 }
 public class Matadd2 {
@@ -33,10 +32,18 @@ public class Matadd2 {
 		int a[][]=a1.matrixa(e);
 		int b[][]=a1.matrixb();
 		//Method used as parameter in another method
-		a1.Madd(a,b);
+		int k[][]=a1.Madd(a,b);
+		for(int i=0;i<k.length;i++)
+		{
+			for(int j=0;j<k[0].length;j++)
+			{
+				System.out.print(k[i][j]);
+			}
+			System.out.println();
+		}
 		System.out.println("$$$$$$$$$$$$$$$");
 		//or
-		a1.Madd(a1.matrixa(e),a1.matrixb());
+		int q[][]=a1.Madd(a1.matrixa(e),a1.matrixb());
 
 
 	}

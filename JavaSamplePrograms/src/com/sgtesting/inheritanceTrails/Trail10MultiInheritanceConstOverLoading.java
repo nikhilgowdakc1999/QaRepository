@@ -1,4 +1,5 @@
 package com.sgtesting.inheritanceTrails;
+//Multi-level inheritance with constructor overloading in super class
 class AA6
 {
 	AA6(int x)

@@ -14,7 +14,7 @@ public class FileReaderDemo {
 		int n=0;
 		try
 		{
-			fr=new FileReader("E:\\EXAMPLE\\Welcome\\Sample.txt");
+			fr=new FileReader("D:\\New folder\\EXAMPLE\\WELCOME\\Sample.txt");
 			while(true)
 			{
 				n=fr.read();

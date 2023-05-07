@@ -15,7 +15,8 @@ public class FireFoxBrowser {
 	{
 		try 
 		{
-			System.setProperty("webdriver.gecko.driver","E:\\ExampleAutomation\\Automation\\Web-Automation1\\Library\\drivers\\geckodriver.exe");
+			String path=System.getProperty("user.dir");
+			System.setProperty("webdriver.gecko.driver",path+"\\Library\\drivers\\geckodriver.exe");
 			oBrowser=new FirefoxDriver();
 		}catch(Exception e)
 		{

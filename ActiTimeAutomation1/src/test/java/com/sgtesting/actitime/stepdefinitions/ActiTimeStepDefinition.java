@@ -10,6 +10,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
 
 import com.sgtesting.actitime.utility.ApplicationDependent;
@@ -43,7 +44,10 @@ public class ActiTimeStepDefinition {
 			log.info("Launch the application");
 			String path=System.getProperty("user.dir");
 			System.setProperty("webdriver.chrome.driver", path+"\\Library\\drivers\\chromedriver.exe");
-			oBrowser=new ChromeDriver();
+	    	ChromeOptions options=new ChromeOptions();
+			options.addArguments("--start-maximized");
+			options.addArguments("--remote-allow-origins=*");
+			oBrowser=new ChromeDriver(options);
 			actiTimePage=new ActiTimePages(oBrowser);
 			ApplicationIndependent.waitFor(2L);
 			log.info("The Application has launched successfully");
@@ -68,7 +72,7 @@ public class ActiTimeStepDefinition {
 			log.info("Navigate to the url of the application");
 			oBrowser.get("http://localhost/login.do");
 			ApplicationIndependent.waitFor(5L);
-			ApplicationDependent.getScreenshot(oBrowser, "E:\\EXAMPLE\\ActTime.jpg");
+			ApplicationDependent.getScreenshot(oBrowser, "D:\\New folder\\EXAMPLE\\ActTime1.png");
 			log.info("Navigate to the url of the application has performed successfully");
 		}catch(Exception e)
 		{

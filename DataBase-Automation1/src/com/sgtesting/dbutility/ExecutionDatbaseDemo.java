@@ -10,7 +10,7 @@ public class ExecutionDatbaseDemo {
 		int cc=DatabaseUtil.getColumnsCount("select * from Employee");
 		System.out.println("# of Columns :"+cc);
 		
-		String val=DatabaseUtil.getColumnData("select * from Employee where EMPID=02", "EMPNAME");
+		String val=DatabaseUtil.getColumnData("select * from Employee where EMPID=2", "EMPNAME");
 		System.out.println("Column Data :"+val);
 	}
 

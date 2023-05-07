@@ -8,6 +8,7 @@ class Demo1
 	{
 		System.out.println("instance body2");
 	}
+	static
 	{
 		System.out.println("instance body1");
 	}

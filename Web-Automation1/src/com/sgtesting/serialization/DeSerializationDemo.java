@@ -17,9 +17,9 @@ public class DeSerializationDemo {
 		Employee obj=null;
 		try
 		{
-			fin=new FileInputStream("E:\\GitRepository\\CurrentWorkSpace\\Employee.ser");
+			fin=new FileInputStream("D:\\New folder\\GitRepository\\CurrentWorkSpace\\Employee.ser");
 			in=new ObjectInputStream(fin);
-			obj=(Employee) in.readObject();
+			obj= (Employee) in.readObject();
 			
 			obj.showFN();
 			obj.showJobName();

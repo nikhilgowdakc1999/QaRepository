@@ -16,7 +16,7 @@ public class SerializationDemo {
 		Employee obj=null;
 		try
 		{
-			fout=new FileOutputStream("E:\\GitRepository\\CurrentWorkSpace\\Employee.ser",true);
+			fout=new FileOutputStream("D:\\New folder\\GitRepository\\CurrentWorkSpace\\Employee.ser",true);
 			out=new ObjectOutputStream(fout);
 			obj=new Employee("Santosh",7211,"Manager",8500);
 			

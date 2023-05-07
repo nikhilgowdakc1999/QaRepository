@@ -22,6 +22,9 @@ public class ChromeOptionsDemo {
 			ChromeOptions options=new ChromeOptions();
 			options.addArguments("--disable-notifications");
 			options.addArguments("--start-maximized");
+			options.addArguments("incognito");
+			options.addArguments("window-size=1920,1080");
+			
 			oBrowser=new ChromeDriver(options);
 		}catch(Exception e)
 		{

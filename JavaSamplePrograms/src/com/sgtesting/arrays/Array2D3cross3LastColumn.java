@@ -8,7 +8,7 @@ public class Array2D3cross3LastColumn {
 		for(int i=0;i<arr.length;i++)
 		{
 	//to read first column only k<=0
-			for(int k=2;k<arr[i].length;k++)
+			for(int k=arr[i].length-1;k<arr[i].length;k++)
 			{
 				System.out.print(arr[i][k]+" ");
 			}

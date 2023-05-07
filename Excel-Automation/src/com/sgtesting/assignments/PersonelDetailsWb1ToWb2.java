@@ -13,12 +13,11 @@ public class PersonelDetailsWb1ToWb2 {
 
 	public static void main(String[] args) {
 		ReadAndWriteContent();
-
 	}
 	private static void ReadAndWriteContent()
 	{
-		FileInputStream fin1=null;
-		FileOutputStream fout=null;
+		FileInputStream fin=null;
+		FileOutputStream fout1=null;
 		Workbook wb=null;
 		Workbook wb1=null;
 		Sheet sh=null;
@@ -29,8 +28,8 @@ public class PersonelDetailsWb1ToWb2 {
 		Cell cell1=null;
 		try
 		{
-			fin1=new FileInputStream("E:\\Niki\\Sg notes\\PersonelDetails.xlsx");
-			wb=new XSSFWorkbook(fin1);
+			fin=new FileInputStream("D:\\New folder\\niki\\PersonelDetails.xlsx");
+			wb=new XSSFWorkbook(fin);
 			wb1=new XSSFWorkbook();
 			
 			sh=wb.getSheet("Sheet1");
@@ -51,8 +50,8 @@ public class PersonelDetailsWb1ToWb2 {
 				}
 				System.out.println();
 			}
-			fout=new FileOutputStream("E:\\Niki\\Sg notes\\PersonelDetails1.xlsx");
-			wb.write(fout);
+			fout1=new FileOutputStream("D:\\New folder\\niki\\PersonelDetails1.xlsx");
+			wb.write(fout1);
 		}catch (Exception e) 
 		{
 			e.printStackTrace();
@@ -61,8 +60,8 @@ public class PersonelDetailsWb1ToWb2 {
 		{
 			try
 			{
-				fin1.close();
-				fout.close();
+				fin.close();
+				fout1.close();
 				wb.close();
 				wb1.close();
 			}catch (Exception e) 

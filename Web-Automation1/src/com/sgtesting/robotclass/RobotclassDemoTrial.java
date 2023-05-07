@@ -16,7 +16,9 @@ import org.openqa.selenium.interactions.Actions;
 public class RobotclassDemoTrial {
 
 	public static void main(String[] args) throws InterruptedException, AWTException {
-		System.setProperty("webdriver.gecko.driver", "E:\\GitRepository\\CurrentWorkSpace\\ExampleAugust26th2022Repository\\Web-Automation1\\Library\\drivers\\geckodriver.exe");
+		String path=System.getProperty("user.dir");
+		System.setProperty("webdriver.gecko.driver",path+"\\Library\\drivers\\geckodriver.exe");
+		
 		WebDriver oBrowser=new FirefoxDriver();
 		
 		oBrowser.get("http://localhost/login.do");
@@ -42,7 +44,7 @@ public class RobotclassDemoTrial {
 		Thread.sleep(2000);
 		
 		//copying file name
-		StringSelection stringSelection=new StringSelection("E:\\GitRepository\\CurrentWorkSpace\\Sample.csv");
+		StringSelection stringSelection=new StringSelection("D:\\New folder\\GitRepository\\CurrentWorkSpace\\Sample.csv");
 		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);
 		Thread.sleep(2000);
 		

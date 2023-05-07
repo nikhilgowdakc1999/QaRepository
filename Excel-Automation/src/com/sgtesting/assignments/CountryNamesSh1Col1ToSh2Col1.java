@@ -27,7 +27,7 @@ public class CountryNamesSh1Col1ToSh2Col1 {
 		Cell cell1=null;
 
 		try {
-			fin=new FileInputStream("E:\\Niki\\Sg notes\\Countryname.xlsx");
+			fin=new FileInputStream("D:\\New folder\\niki\\Countryname.xlsx");
 			wb=new XSSFWorkbook(fin);
 			sh=wb.getSheet("sheet1");
 			sh1=wb.createSheet("sheet2");
@@ -43,7 +43,7 @@ public class CountryNamesSh1Col1ToSh2Col1 {
 				System.out.println(data);	
 				cell1.setCellValue(data);
 			}
-			fout=new FileOutputStream("E:\\Niki\\Sg notes\\Countryname.xlsx");
+			fout=new FileOutputStream("D:\\New folder\\niki\\Countryname.xlsx");
 			wb.write(fout);
 		} catch (Exception e) {
 			e.printStackTrace();

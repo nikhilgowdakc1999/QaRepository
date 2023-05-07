@@ -9,6 +9,7 @@ import java.awt.event.KeyEvent;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class Assignment9Actime {
 
@@ -27,7 +28,10 @@ public class Assignment9Actime {
 		{
 			String path=System.getProperty("user.dir");
 			System.setProperty("webdriver.chrome.driver", path+"\\Library\\drivers\\chromedriver.exe");
-			oBrowser=new ChromeDriver();
+			ChromeOptions options=new ChromeOptions();
+			options.addArguments("--start-maximized");
+			options.addArguments("--remote-allow-origins=*");
+			oBrowser=new ChromeDriver(options);
 		}catch(Exception e)
 		{
 			e.printStackTrace();
@@ -86,7 +90,7 @@ public class Assignment9Actime {
 			Thread.sleep(2000);
 			oBrowser.findElement(By.id("dropzoneClickableArea")).click();
 			Thread.sleep(2000);
-			String filename="E:\\GitRepository\\CurrentWorkSpace\\Sample.csv";
+			String filename="D:\\New folder\\GitRepository\\CurrentWorkSpace\\Sample.csv";
 			copyFile(filename);
 			Thread.sleep(2000);
 			Robot robot=new Robot();

@@ -22,6 +22,7 @@ public class WriteExcelContentDemo {
 		Cell cell=null;
 		try
 		{
+			fout=new FileOutputStream("D:\\New folder\\niki\\Welcome1.xlsx");
 			wb=new XSSFWorkbook();
 			sh=wb.createSheet("Credentials");
 			//First Row
@@ -36,7 +37,7 @@ public class WriteExcelContentDemo {
 			cell.setCellValue("admin");
 			cell=row.createCell(1);
 			cell.setCellValue("manager");
-			fout=new FileOutputStream("E:\\EXCEL\\Welcome.xlsx");
+			
 			wb.write(fout);
 		}catch (Exception e) 
 		{

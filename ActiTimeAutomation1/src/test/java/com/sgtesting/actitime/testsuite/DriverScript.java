@@ -12,7 +12,7 @@ import cucumber.api.testng.CucumberFeatureWrapper;
 import cucumber.api.testng.TestNGCucumberRunner;
 
 @CucumberOptions(
-		features="src/test/resources/FeatureFiles",
+		features="src/test/resources/FeatureFiles/users.feature",
 		glue={"com.sgtesting.actitime.stepdefinitions"},
 		plugin = {"com.vimalselvam.cucumber.listener.ExtentCucumberFormatter:Reports/cucumber-extent-reports/AutomationResultReports.html"},
 		tags ={"@Execute"}

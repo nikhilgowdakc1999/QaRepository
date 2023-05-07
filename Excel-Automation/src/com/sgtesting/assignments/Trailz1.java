@@ -25,13 +25,13 @@ public class Trailz1 {
 			wb=new XSSFWorkbook();
 			sh=wb.createSheet("5 Flowers List");
 			String a[]= {"Rose","Jasmine","Lilly","Tulip","Lotus"};
-			for(int i=0;i<5;i++)
+			for(int i=0;i<a.length;i++)
 			{
 				row=sh.createRow(i);
 				cell=row.createCell(0);
 				cell.setCellValue((a[i]));
 			}
-			fout=new FileOutputStream("E:\\Niki\\Sg notes\\5-Flowers.xlsx");
+			fout=new FileOutputStream("D:\\New folder\\niki\\5-Flowers1.xlsx");
 			wb.write(fout);
 
 		}catch(Exception e)

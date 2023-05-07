@@ -13,7 +13,7 @@ interface hockey6 extends Football6
 {
 	void showplayername3(String name);
 }
-class Sports6 implements Cricket6,Football6,hockey6
+class Sports6 implements hockey6
 {
 	public void showplayername1(String name) 
 	{

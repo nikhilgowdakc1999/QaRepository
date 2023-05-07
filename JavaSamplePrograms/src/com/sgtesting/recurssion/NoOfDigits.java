@@ -1,23 +1,21 @@
 package com.sgtesting.recurssion;
-class DigitsCount
-{
-int Digit(int a)
-{
-	int count=0;
-	for(int i=a;i!=0;i/=10)
+class Digits{
+	int digi(int num)
 	{
-	count++;
+		int count=0;
+		for(int i=num;i>0;i/=10)
+		{
+			count++;
+		}
+		return count;
 	}
-	return count;	
-}
 }
 public class NoOfDigits {
 
 	public static void main(String[] args) {
-		
-		DigitsCount a1=new DigitsCount();
-		int p=a1.Digit(545454);
-		System.out.println(p);
+		Digits a1= new Digits();
+		int k=a1.digi(13247563);
+		System.out.println(k);
 	}
 
 }

@@ -1,7 +1,7 @@
 package com.sgtesting.listinterface;
 
 import java.util.HashMap;
-
+//sorting string using hashmap
 public class HashMap1 {
 
 	public static void main(String[] args) {

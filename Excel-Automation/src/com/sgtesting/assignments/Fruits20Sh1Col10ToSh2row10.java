@@ -28,7 +28,7 @@ public class Fruits20Sh1Col10ToSh2row10 {
 		Cell cell1=null;
 
 		try {
-			fin=new FileInputStream("E:\\Niki\\Sg notes\\Fruitsname.xlsx");
+			fin=new FileInputStream("D:\\New folder\\niki\\Fruitsname.xlsx");
 			wb=new XSSFWorkbook(fin);
 			sh=wb.getSheet("sheet1");
 			sh1=wb.createSheet("sheet2");
@@ -43,7 +43,7 @@ public class Fruits20Sh1Col10ToSh2row10 {
 				System.out.println(data);	
 				cell1.setCellValue(data);
 			}
-			fout=new FileOutputStream("E:\\Niki\\Sg notes\\Fruitsname.xlsx");
+			fout=new FileOutputStream("D:\\New folder\\niki\\Fruitsname.xlsx");
 			wb.write(fout);
 		} catch (Exception e) {
 			e.printStackTrace();

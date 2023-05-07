@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class CSSSelector {
 	
@@ -37,7 +38,9 @@ public class CSSSelector {
 		{
 			String path=System.getProperty("user.dir");
 			System.setProperty("webdriver.chrome.driver", path+"\\Library\\drivers\\chromedriver.exe");
-			oBrowser=new ChromeDriver();
+			ChromeOptions options=new ChromeOptions();
+			options.addArguments("--remote-allow-origins=*");
+			oBrowser=new ChromeDriver(options);
 		}catch(Exception e)
 		{
 			e.printStackTrace();
@@ -48,7 +51,7 @@ public class CSSSelector {
 	{
 		try
 		{
-			oBrowser.get("E:\\Niki\\Sg notes\\xpath_xpathaxes_samplehtmlfiles\\SampleXPath.html");
+			oBrowser.get("D:\\New folder\\niki\\xpath_xpathaxes_samplehtmlfiles\\SampleXPath.html");
 			Thread.sleep(5000);
 		}catch(Exception e)
 		{

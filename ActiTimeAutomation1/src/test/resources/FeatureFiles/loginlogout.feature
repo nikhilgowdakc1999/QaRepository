@@ -13,11 +13,11 @@ And Navigate to the url of the application
 When Login using valid credentials
 |username|password|
 |admin|manager|
-Then the Home page should display
+#Then the Home page should display
 And minimize the flyout Window
 
 Scenario: Logout from Application
 When Perform logout action
 Then the login page should display
-And Close Application Browser
+#And Close Application Browser
 

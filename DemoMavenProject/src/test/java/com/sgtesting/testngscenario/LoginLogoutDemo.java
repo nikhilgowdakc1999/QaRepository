@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -16,8 +17,11 @@ public class LoginLogoutDemo {
 	{
 		try
 		{
-			System.setProperty("webdriver.chrome.driver", "E:\\GitRepository\\CurrentWorkSpace\\ExampleAugust26th2022Repository\\Testng-Automation\\Library\\drivers\\chromedriver.exe");
-			oBrowser=new ChromeDriver();
+			String path=System.getProperty("user.dir");
+			System.setProperty("webdriver.chrome.driver", path+"\\Library\\Driver\\chromedriver.exe");
+			ChromeOptions options=new ChromeOptions();
+			options.addArguments("--remote-allow-origins=*");
+			oBrowser=new ChromeDriver(options);
 		}catch(Exception e)
 		{
 			e.printStackTrace();
@@ -92,7 +96,6 @@ public class LoginLogoutDemo {
 			e.printStackTrace();
 		}
 	}
-	
 	@Test(priority = 6)
 	private static void closeApp()
 	{

@@ -3,6 +3,7 @@ package com.sgtesting.pageobjectmodel;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class AssignmentPOM2 {
 	public static WebDriver oBrowser=null;
@@ -24,8 +25,11 @@ public class AssignmentPOM2 {
 	{
 		try
 		{
-			System.setProperty("webdriver.chrome.driver", "E:\\ExampleAutomation\\Automation\\Web-Automation1\\Library\\drivers\\chromedriver.exe");
-			oBrowser=new ChromeDriver();
+			String path=System.getProperty("user.dir");
+			System.setProperty("webdriver.chrome.driver",path+ "\\Library\\drivers\\chromedriver.exe");
+			ChromeOptions options=new ChromeOptions();
+			options.addArguments("--remote-allow-origins=*");
+			oBrowser=new ChromeDriver(options);
 			oPage=new ActiPageDEMO(oBrowser);
 		}catch(Exception e)
 		{

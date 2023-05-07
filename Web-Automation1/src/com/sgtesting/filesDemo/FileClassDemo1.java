@@ -5,7 +5,7 @@ import java.io.File;
 public class FileClassDemo1 {
 
 	public static void main(String[] args) {
-		File f1=new File("E:\\EXAMPLE\\Welcome\\Test.txt");
+		File f1=new File("D:\\New folder\\EXAMPLE\\WELCOME\\Test.txt");
 		//Display Name of the File
 		String name=f1.getName();
 		System.out.println("File Name :"+name);

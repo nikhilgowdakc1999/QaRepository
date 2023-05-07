@@ -8,9 +8,9 @@ import java.sql.Statement;
 
 public class StatementDemoForSQLStatements {
 	public static void main(String[] args) {
-	//	getRecordsFromDatabase();
+		getRecordsFromDatabase();
 	//	insertRecords();
-		deleteRecords();
+	//	deleteRecords();
 	}
 	private static void getRecordsFromDatabase()
 	{
@@ -20,6 +20,7 @@ public class StatementDemoForSQLStatements {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			conn=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "System", "tiger");
 			System.out.println("Connection has successful!!!");
+			
 			Statement stmt=conn.createStatement();
 			String strQuery="select * from Employee";
 			ResultSet rs=stmt.executeQuery(strQuery);
@@ -40,6 +41,7 @@ public class StatementDemoForSQLStatements {
 				String EName=rs.getString("EMPNAME");
 				String Design=rs.getString("DESIGNATION");
 				String Sal=rs.getString("SALARY");
+				
 				System.out.printf("%-12s",EId);
 				System.out.printf("%-12s",EName);
 				System.out.printf("%-12s",Design);
@@ -71,9 +73,9 @@ public class StatementDemoForSQLStatements {
 			conn=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "System", "tiger");
 			
 			Statement stmt=conn.createStatement();
-			String strQuery="insert into Employee values(04,'Benzee','MD',90000)";
+			String strQuery="insert into Employee values(04,'Benzee',9000,'MD')";
 			stmt.executeUpdate(strQuery);
-			System.out.println("Inserted the records successfully!!!");
+			System.out.println("Inserted the record successfully!!!");
 		}catch (Exception e) 
 		{
 			e.printStackTrace();
@@ -100,7 +102,7 @@ public class StatementDemoForSQLStatements {
 			Statement stmt=conn.createStatement();
 			String strQuery="delete from Employee where EMPID=04";
 			stmt.executeUpdate(strQuery);
-			System.out.println("deleted the records successfully!!!");
+			System.out.println("deleted the record successfully!!!");
 		}catch (Exception e) 
 		{
 			e.printStackTrace();

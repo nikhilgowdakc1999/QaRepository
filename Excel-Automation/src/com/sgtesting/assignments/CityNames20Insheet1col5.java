@@ -30,7 +30,7 @@ public class CityNames20Insheet1col5 {
 				cell=row.createCell(4);
 				cell.setCellValue("CityNames"+(i+1));
 			}
-			fout=new FileOutputStream("E:\\Niki\\Sg notes\\20-CityNames.xlsx");
+			fout=new FileOutputStream("D:\\New folder\\niki\\20-CityNames1.xlsx");
 			wb.write(fout);
 
 		}catch(Exception e)

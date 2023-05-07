@@ -25,8 +25,8 @@ public static void launchbrowser()
 {
 	try
 	{
-	String path=System.getProperty("user.dir");
-	System.setProperty("webdriver.chrome.driver", path+"\\Library\\drivers\\chromedriver.exe");
+		String path=System.getProperty("user.dir");
+		System.setProperty("webdriver.chrome.driver", path+"\\Library\\drivers\\chromedriver.exe");
 	
 	ChromeOptions options=new ChromeOptions();
 	options.addArguments("startmaximized");

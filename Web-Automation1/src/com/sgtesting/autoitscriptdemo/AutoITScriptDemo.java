@@ -10,7 +10,7 @@ private static void executeDemo()
 {
 	try
 	{
-		Runtime.getRuntime().exec("E:\\GitRepository\\CurrentWorkSpace\\AutoItCase2.exe");
+		Runtime.getRuntime().exec("D:\\New folder\\GitRepository\\CurrentWorkSpace\\AutoItCase1.exe");
 	}catch(Exception e)
 	{
 		e.printStackTrace();

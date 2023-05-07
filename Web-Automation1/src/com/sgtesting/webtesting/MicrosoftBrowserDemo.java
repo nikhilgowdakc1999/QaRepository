@@ -15,7 +15,8 @@ public class MicrosoftBrowserDemo {
 	{
 		try
 		{
-			System.setProperty("webdriver.edge.driver", "E:\\ExampleAutomation\\Automation\\Web-Automation1\\Library\\drivers\\msedgedriver.exe");
+			String path=System.getProperty("user.dir");
+			System.setProperty("webdriver.edge.driver", path+"\\Library\\drivers\\msedgedriver.exe");
 			oBrowser=new EdgeDriver();
 		}catch(Exception e)
 		{

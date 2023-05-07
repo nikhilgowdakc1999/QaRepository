@@ -15,7 +15,7 @@ public class BufferedWriter1 {
 		BufferedWriter bw=null;
 		try
 		{
-			fw=new FileWriter("E:\\EXAMPLE\\Welcome\\Sample3.txt",true);
+			fw=new FileWriter("D:\\New folder\\EXAMPLE\\WELCOME\\Sample3.txt",true);
 			bw=new BufferedWriter(fw);
 			
 			bw.write("SQL stands for Structured Query Language.");
