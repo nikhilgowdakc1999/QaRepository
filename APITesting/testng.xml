@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<suite name="API Automation">
-	<test name="API Testing">
-		<classes>
-			<class name="com.sgtesting.api.APITesting.Sample"></class>
-		</classes>
-	</test>
-</suite>
